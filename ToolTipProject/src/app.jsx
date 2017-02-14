@@ -5,7 +5,7 @@ class Tooltip extends React.Component
     {
         super(props)
         this.state={opacity:false}
-        this.toggle=this.toggle.bind(this)
+        this.invokeToggle=this.toggle.bind(this)
     }
 
     toggle()
@@ -31,8 +31,8 @@ class Tooltip extends React.Component
 
         return <div style={{display:'inline'}}>
         <span style={{color:'red'}}
-        onMouseEnter={this.toggle}
-        onMouseOut={this.toggle}>
+        onMouseEnter={this.invokeToggle}
+        onMouseOut={this.invokeToggle}>
         {this.props.children}
         </span>
         
@@ -56,11 +56,19 @@ ReactDOM.render(
     <div>
     <div>
     <Tooltip text="React is component based architecture introduce by FACEBOOK" >React Quickly </Tooltip>
-    was published in 2018,Its awsome!
+    is promoted in Saylani.
     </div>,
     <div>
-    <Tooltip text="React is component based architecture introduce by FACEBOOK" >React Up and Running </Tooltip>
-    was published in 2018,Its awsome!
+    <Tooltip text="React up and running is nice book for novice users" >React Up and Running </Tooltip>
+    is promoted in Saylani,Its awsome!
+    </div>,
+    <div>
+    <Tooltip text="React is component based architecture introduce by FACEBOOK" >React Quickly </Tooltip>
+    is promoted in Saylani.
+    </div>,
+    <div>
+    <Tooltip text="React up and running is nice book for novice users" >React Up and Running </Tooltip>
+    is promoted in Saylani,Its awsome!
     </div>
     </div>,
     document.getElementById('tooltip')
