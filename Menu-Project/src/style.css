@@ -1,0 +1,16 @@
+a#list-item
+{
+text-decoration: none;
+display:inline-block;
+}
+
+a#list-item:hover
+{
+    color: mediumvioletred;
+}
+#menusection
+{
+    display: inline;
+    padding-left: 100px;
+}
+
